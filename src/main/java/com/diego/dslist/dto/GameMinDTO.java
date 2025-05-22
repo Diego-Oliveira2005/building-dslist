@@ -2,6 +2,7 @@ package com.diego.dslist.dto;
 
 import com.diego.dslist.entities.Game;
 import jakarta.persistence.Column;
+import projections.GameMinProjection;
 
 public class GameMinDTO {
     private Long id;
@@ -18,6 +19,14 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
     public Long getId() {
