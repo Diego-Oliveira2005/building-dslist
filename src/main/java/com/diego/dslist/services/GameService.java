@@ -3,7 +3,7 @@ package com.diego.dslist.services;
 import com.diego.dslist.dto.GameDTO;
 import com.diego.dslist.dto.GameMinDTO;
 import com.diego.dslist.entities.Game;
-import com.diego.dslist.repositories.GameRepository;
+import com.diego.dslist.repositories.gameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +15,7 @@ import java.util.List;
 public class GameService {
 
     @Autowired
-    private GameRepository gameRepository;
+    private gameRepository gameRepository;
 
     @Transactional(readOnly = true)
     public GameDTO findById(Long id) {

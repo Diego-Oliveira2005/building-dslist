@@ -7,7 +7,7 @@ import projections.GameMinProjection;
 
 import java.util.List;
 
-public interface GameRepository extends JpaRepository<Game, Long> {
+public interface gameRepository extends JpaRepository<Game, Long> {
 
     @Query(nativeQuery = true, value = """
 		SELECT tb_game.id, tb_game.title, tb_game.game_year AS gameYear, tb_game.img_url AS imgUrl,
